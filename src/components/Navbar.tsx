@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Zap, Activity } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
@@ -54,6 +54,51 @@ export default function Navbar() {
                 >
                   Electricals Trainer Kits <ChevronDown size={16} />
                 </Link>
+
+                {/* Level 1 Dropdown */}
+                <div className="absolute top-full left-0 hidden group-hover:block pt-4 w-72">
+                  <div className="bg-black/90 backdrop-blur-2xl border border-white/10 rounded-xl p-2 shadow-2xl ring-1 ring-white/5">
+                      
+                    {/* Electrical Group */}
+                    <div className="relative group/electrical">
+                        <Link 
+                          href="/electrical-trainer-kits/electrical" 
+                          className="w-full flex items-center justify-between px-4 py-3 text-sm text-foreground hover:bg-neutral-800/50 hover:text-red-500 rounded-lg transition-all duration-200 border border-transparent hover:border-red-500/10 group-hover/electrical:bg-neutral-800/80"
+                        >
+                          <span className="flex items-center gap-3">
+                            <div className="p-2 rounded-md bg-neutral-900 border border-white/5 group-hover/electrical:border-red-500/30 group-hover/electrical:bg-red-500/10 transition-colors shadow-lg">
+                                <Zap size={18} className="text-red-500" />
+                            </div>
+                            <div>
+                                <span className="font-semibold text-sm tracking-wide block">Electrical</span>
+                                <span className="text-[10px] text-neutral-500 font-medium hidden group-hover/electrical:block animate-in fade-in slide-in-from-left-1">Trainer Kits</span>
+                            </div>
+                          </span>
+                          <ChevronRight size={14} className="text-neutral-600 group-hover/electrical:text-red-500 transition-transform group-hover/electrical:translate-x-0.5" />
+                        </Link>
+
+                        {/* Level 2 Dropdown (Starters) */}
+                        <div className="absolute top-0 left-full hidden group-hover/electrical:block pl-2 w-80">
+                          <div className="bg-black border border-neutral-800 rounded-xl p-3 shadow-2xl ring-1 ring-white/5 animate-in fade-in slide-in-from-left-2 duration-200">
+                              <div className="px-3 py-2 text-[10px] font-bold text-neutral-500 uppercase tracking-[0.2em] mb-1">
+                                Select product series
+                              </div>
+                              
+                              <Link href="/electrical-trainer-kits/electrical/starters" className="flex items-center justify-between px-4 py-3 text-sm text-neutral-400 hover:bg-neutral-800/50 hover:text-white rounded-lg transition-all group/item border border-transparent hover:border-neutral-700/50">
+                                  <div className="flex items-center gap-3">
+                                    <div className="p-1.5 rounded-md bg-neutral-900 border border-neutral-800 group-hover/item:border-blue-500/30 group-hover/item:bg-blue-500/10 transition-colors shadow-sm">
+                                      <Activity size={16} className="text-blue-500" />
+                                    </div>
+                                    <span className="font-medium">Starters</span>
+                                  </div>
+                                  <ChevronRight size={14} className="text-neutral-700 group-hover/item:text-white transition-transform group-hover/item:translate-x-0.5" />
+                              </Link>
+                          </div>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
               </div>
               {['About', 'Services', 'Certificates'].map((item) => (
                 <Link
@@ -95,6 +140,15 @@ export default function Navbar() {
           >
             Electricals Trainer Kits <ChevronDown size={16} />
           </Link>
+          <div className="pl-4 space-y-1">
+             <Link 
+              href="/electrical-trainer-kits/electrical/starters"
+              className="block text-sm text-neutral-400 hover:text-white py-2 px-3 rounded-md hover:bg-white/5 transition-colors"
+              onClick={() => setIsOpen(false)}
+             >
+               ↳ Electrical Starters
+             </Link>
+          </div>
           {['About', 'Services', 'Certificates'].map((item) => (
             <Link
               key={item}
