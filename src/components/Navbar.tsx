@@ -48,8 +48,8 @@ export default function Navbar() {
                 Home
               </Link>
               <div className="relative group">
-                <button className="flex items-center gap-1 text-primary font-medium hover:text-primary/80 transition-all duration-200 px-3 py-2 rounded-md text-sm">
-                  Products <ChevronDown size={16} />
+                <button className="flex items-center gap-1 text-primary font-medium hover:text-primary/80 transition-all duration-200 px-3 py-2 rounded-md text-sm ring-1 ring-white/10 hover:ring-white/20">
+                  Electricals Trainer Kits <ChevronDown size={16} />
                 </button>
               </div>
               {['About', 'Services', 'Certificates'].map((item) => (
@@ -86,7 +86,7 @@ export default function Navbar() {
             Home
           </Link>
           <button className="w-full text-left flex items-center justify-between text-primary font-medium hover:bg-white/5 px-3 py-3 rounded-md text-base transition-colors">
-            Products <ChevronDown size={16} />
+            Electricals Trainer Kits <ChevronDown size={16} />
           </button>
           {['About', 'Services', 'Certificates'].map((item) => (
             <Link
