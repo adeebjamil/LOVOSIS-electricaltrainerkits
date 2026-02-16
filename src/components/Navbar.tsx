@@ -48,9 +48,12 @@ export default function Navbar() {
                 Home
               </Link>
               <div className="relative group">
-                <button className="flex items-center gap-1 text-primary font-medium hover:text-primary/80 transition-all duration-200 px-3 py-2 rounded-md text-sm ring-1 ring-white/10 hover:ring-white/20">
+                <Link 
+                  href="/electrical-trainer-kits" 
+                  className="flex items-center gap-1 text-primary font-medium hover:text-primary/80 transition-all duration-200 px-3 py-2 rounded-md text-sm ring-1 ring-white/10 hover:ring-white/20"
+                >
                   Electricals Trainer Kits <ChevronDown size={16} />
-                </button>
+                </Link>
               </div>
               {['About', 'Services', 'Certificates'].map((item) => (
                 <Link
@@ -85,9 +88,13 @@ export default function Navbar() {
           <Link href="/" className="text-foreground/90 hover:text-primary hover:bg-white/5 block px-3 py-3 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
             Home
           </Link>
-          <button className="w-full text-left flex items-center justify-between text-primary font-medium hover:bg-white/5 px-3 py-3 rounded-md text-base transition-colors">
+          <Link 
+            href="/electrical-trainer-kits" 
+            className="w-full text-left flex items-center justify-between text-primary font-medium hover:bg-white/5 px-3 py-3 rounded-md text-base transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
             Electricals Trainer Kits <ChevronDown size={16} />
-          </button>
+          </Link>
           {['About', 'Services', 'Certificates'].map((item) => (
             <Link
               key={item}
