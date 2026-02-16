@@ -22,9 +22,9 @@ export default function Hero() {
           <span className="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-primary/90 mb-6 backdrop-blur-sm shadow-sm">
             v1.0 is now live 🚀
           </span>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent drop-shadow-sm">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent drop-shadow-sm">
             Build the Future <br className="hidden md:block" />
-            <span className="text-primary/90">with Next.js</span>
+            <span className="text-primary">with Next.js</span>
           </h1>
           <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Create stunning static websites with the power of React, Tailwind CSS, and seamless animations.

@@ -8,43 +8,43 @@ const features = [
     icon: Globe,
     title: "Global CDN",
     description: "Deploy instantly to the edge for fastest delivery worldwide.",
-    color: "text-blue-500",
-    bg: "bg-blue-500/10"
+    color: "text-white",
+    bg: "bg-primary/20"
   },
   {
     icon: Smartphone,
     title: "Responsive",
     description: "Looks perfect on any device, from mobile to desktop.",
-    color: "text-green-500",
-    bg: "bg-green-500/10"
+    color: "text-primary",
+    bg: "bg-white/5"
   },
   {
     icon: RefreshCw,
     title: "Instant Updates",
     description: "Push git commit and see changes live in seconds.",
-    color: "text-purple-500",
-    bg: "bg-purple-500/10"
+    color: "text-white",
+    bg: "bg-primary/20"
   },
   {
     icon: Shield,
     title: "Secure by Default",
     description: "Enterprise-grade security built-in automatically.",
-    color: "text-red-500",
-    bg: "bg-red-500/10"
+    color: "text-primary",
+    bg: "bg-white/5"
   },
   {
     icon: Zap,
     title: "High Performance",
     description: "Optimized for Core Web Vitals out of the box.",
-    color: "text-yellow-500",
-    bg: "bg-yellow-500/10"
+    color: "text-white",
+    bg: "bg-primary/20"
   },
   {
     icon: Copy,
     title: "Copy & Paste",
     description: "Components ready to drop into your project.",
-    color: "text-pink-500",
-    bg: "bg-pink-500/10"
+    color: "text-primary",
+    bg: "bg-white/5"
   },
 ];
 

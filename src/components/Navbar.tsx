@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-primary via-purple-500 to-accent bg-clip-text text-transparent animate-gradient-x">
+            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-primary to-rose-500 bg-clip-text text-transparent animate-gradient-x">
               NextStatic
             </Link>
           </div>
