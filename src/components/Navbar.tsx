@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
@@ -44,7 +44,15 @@ export default function Navbar() {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {['Home', 'Features', 'Showcase', 'Contact'].map((item) => (
+              <Link href="/" className="text-foreground/80 hover:text-primary hover:scale-105 transition-all duration-200 px-3 py-2 rounded-md text-sm font-medium">
+                Home
+              </Link>
+              <div className="relative group">
+                <button className="flex items-center gap-1 text-primary font-medium hover:text-primary/80 transition-all duration-200 px-3 py-2 rounded-md text-sm">
+                  Products <ChevronDown size={16} />
+                </button>
+              </div>
+              {['About', 'Services', 'Certificates'].map((item) => (
                 <Link
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -53,9 +61,6 @@ export default function Navbar() {
                   {item}
                 </Link>
               ))}
-              <button className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-full text-sm font-medium transition-transform transform hover:-translate-y-0.5 shadow-lg shadow-primary/25">
-                Get Started
-              </button>
             </div>
           </div>
           <div className="md:hidden">
@@ -77,7 +82,13 @@ export default function Navbar() {
         )}
       >
         <div className="px-4 pt-2 pb-6 space-y-2">
-          {['Home', 'Features', 'Showcase', 'Contact'].map((item) => (
+          <Link href="/" className="text-foreground/90 hover:text-primary hover:bg-white/5 block px-3 py-3 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
+            Home
+          </Link>
+          <button className="w-full text-left flex items-center justify-between text-primary font-medium hover:bg-white/5 px-3 py-3 rounded-md text-base transition-colors">
+            Products <ChevronDown size={16} />
+          </button>
+          {['About', 'Services', 'Certificates'].map((item) => (
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -87,9 +98,6 @@ export default function Navbar() {
               {item}
             </Link>
           ))}
-          <button className="w-full mt-4 bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-lg text-base font-medium shadow-lg shadow-primary/25">
-            Get Started
-          </button>
         </div>
       </div>
     </nav>
