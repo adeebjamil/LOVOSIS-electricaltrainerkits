@@ -1,4 +1,6 @@
 
+import Link from "next/link";
+import Image from "next/image";
 import { Github, Twitter, Linkedin, Heart } from "lucide-react";
 
 export default function Footer() {
@@ -8,9 +10,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
-              NextStatic
-            </h2>
+            <Link href="/" className="inline-block mb-4">
+              <div className="relative h-12 w-48">
+                <Image 
+                  src="/logo.png" 
+                  alt="Lovosis Logo" 
+                  fill
+                  className="object-contain object-left"
+                />
+              </div>
+            </Link>
             <p className="text-muted-foreground max-w-sm">
               Building the next generation of static websites with modern tools and beautiful design.
             </p>
@@ -39,9 +48,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} NextStatic. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Lovosis Technology. All rights reserved.</p>
           <p className="flex items-center gap-1 mt-4 md:mt-0">
-            Made with <Heart size={16} className="text-red-500 fill-current" /> by YourTeam
+            Made with <Heart size={16} className="text-red-500 fill-current" /> by Lovosis Team
           </p>
         </div>
       </div>
