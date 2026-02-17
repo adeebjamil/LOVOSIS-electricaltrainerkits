@@ -11,7 +11,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     let products: Product[] = [];
     try {
-        const response = await fetch(`${baseUrl}/api/products`, { next: { revalidate: 3600 } });
+        const apiUrl = process.env.NEXT_PUBLIC_APP_URL
+            ? `${process.env.NEXT_PUBLIC_APP_URL}/api/products`
+            : 'https://lovosis.in/api/products';
+
+        const response = await fetch(apiUrl, { next: { revalidate: 3600 } });
         if (response.ok) {
             const data = await response.json();
             products = data.products || [];

@@ -257,26 +257,7 @@ export default function ProductDetailClient() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                {product.catalogue_pdf_url && (
-                  <a
-                    href={product.catalogue_pdf_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-4 bg-red-600 text-white font-bold rounded-xl hover:bg-red-700 transition-all duration-300 shadow-lg shadow-red-600/20 hover:shadow-red-600/40 hover:-translate-y-0.5"
-                  >
-                    <Download size={18} />
-                    Download Catalogue
-                  </a>
-                )}
-                <button
-                  onClick={handleShare}
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-4 bg-neutral-100 text-neutral-700 font-bold rounded-xl hover:bg-neutral-200 transition-all duration-300 border border-neutral-200"
-                >
-                  <Share2 size={18} />
-                  Share Product
-                </button>
-              </div>
+
 
               {/* Enquiry CTA */}
               <div className="bg-gradient-to-r from-neutral-900 to-neutral-800 rounded-2xl p-6 text-white">
