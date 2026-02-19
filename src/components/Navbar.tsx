@@ -59,7 +59,7 @@ export default function Navbar() {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2.5 group">
-                <div className="relative h-9 w-36 md:h-10 md:w-40 transition-transform group-hover:scale-[1.03] duration-300">
+                <div className="relative h-12 w-48 md:h-16 md:w-64 transition-transform group-hover:scale-[1.03] duration-300">
                   <Image
                     src="/logo.png"
                     alt="Lovosis Logo"

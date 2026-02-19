@@ -173,17 +173,7 @@ export default function ElectricalProducts() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
                     {/* Catalogue badge */}
-                    {product.catalogue_pdf_url && (
-                      <a
-                        href={product.catalogue_pdf_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm text-neutral-700 hover:bg-red-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all duration-300 shadow-lg"
-                      >
-                        <Download size={12} />
-                        Catalogue
-                      </a>
-                    )}
+
                   </div>
 
                   {/* Product Content */}
