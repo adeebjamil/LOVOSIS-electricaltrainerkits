@@ -49,7 +49,7 @@ export default function Hero() {
               </button>
             </Link>
             
-            <Link href="#contact">
+            <Link href="https://lovosis.in/Contact">
               <button className="px-8 py-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-lg hover:bg-white/20 transition-all shadow-lg hover:scale-105">
                 Request Demo
               </button>
